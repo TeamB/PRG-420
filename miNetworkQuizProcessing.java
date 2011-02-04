@@ -8,9 +8,9 @@
 
 public class miNetworkQuizProcessing
 {
-   miTriviaInterface triviaMenu = new miTriviaInterface();
-   miTrueFalseInterface trueFalseMenu = new miTrueFalseInterface();
-   miMultipleChoiceInterface multipleChoiceMenu = new miMultipleChoiceInterface();
+   miTriviaInterface triviaMenu;
+   miTrueFalseInterface trueFalseMenu;
+   miMultipleChoiceInterface multipleChoiceMenu;
    boolean printTriviaOption = false;
    boolean printTrueFalseOption = false;
    boolean printMultipleChoiceOption = false;
@@ -87,13 +87,14 @@ public class miNetworkQuizProcessing
       String input = new Character((char) selection).toString();// convert input
                                                                 // to string
       input = input.toUpperCase();
-      
+
       switch (input.charAt(0))
-         {
+      {
          case '1':
             if (printTriviaOption)
             {
                // call to Trivia
+               triviaMenu = new miTriviaInterface();
                triviaMenu.menu();
             }
             break;
@@ -102,6 +103,7 @@ public class miNetworkQuizProcessing
             if (printTrueFalseOption)
             {
                // call to True/False
+               trueFalseMenu = new miTrueFalseInterface();
                trueFalseMenu.menu();
             }
             break;
@@ -110,6 +112,7 @@ public class miNetworkQuizProcessing
             if (printMultipleChoiceOption)
             {
                // call to Multiple Choice
+               multipleChoiceMenu = new miMultipleChoiceInterface();
                multipleChoiceMenu.menu();
             }
             break;
@@ -121,7 +124,7 @@ public class miNetworkQuizProcessing
          // input = unknown, display main menu again
          default:
             break;
-         }
+      }
 
       return (exit);
    }
