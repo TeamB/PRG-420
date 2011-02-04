@@ -6,7 +6,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-//import java.text.DecimalFormat;
 import java.io.*;
 
 public class miTriviaInterface
@@ -54,7 +53,8 @@ public class miTriviaInterface
 
    private void reinitialize()
    {
-      NetStudy.getQuestionManager().setDisplayAnser(false);
+      theInputProcessor.reinitialize();
+      theInputProcessor = null; // Delete this object
    }
 
    private void printMenu()
@@ -110,8 +110,7 @@ public class miTriviaInterface
 
          exit = theInputProcessor.processInputs(userInput);
 
-      }
-      while (!exit);
+      } while (!exit);
 
       //
       // Clear the screen
