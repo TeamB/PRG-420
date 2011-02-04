@@ -8,8 +8,8 @@
 
 public class miMainMenuProcessing
 {
-   protected miNetworkQuizInterface networkQuiz = new miNetworkQuizInterface();
-   protected miNetowkCalculatorInterface networkCalc = new miNetowkCalculatorInterface();
+   protected miNetworkQuizInterface networkQuiz;
+   protected miNetowkCalculatorInterface networkCalc;
 
    //
    // Constructor
@@ -35,16 +35,18 @@ public class miMainMenuProcessing
       String input = new Character((char) selection).toString();// convert input
                                                                 // to string
       input = input.toUpperCase();
-      
+
       switch (input.charAt(0))
-         {
+      {
          case '1':
             // call to studyQuizInterface
+            networkQuiz = new miNetworkQuizInterface();
             networkQuiz.menu();
             break;
 
          case '2':
             // call to networkCalculatorInterface
+            networkCalc = new miNetowkCalculatorInterface();
             networkCalc.menu();
             break;
 
@@ -54,7 +56,7 @@ public class miMainMenuProcessing
          // input = unknown, display main menu again
          default:
             break;
-         }
+      }
 
       return (exit);
    }
