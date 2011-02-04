@@ -21,13 +21,13 @@ public class miTriviaProcessing
    //
    public miTriviaProcessing()
    {
-
    }
 
-   private void reinitialize()
+   public void reinitialize()
    {
       theState = menuInterface.miState.DisplayQuestion;
       NetStudy.getQuestionManager().setTriviaQuestionNum(0);
+      NetStudy.getQuestionManager().setDisplayAnser(false);
    }
 
    public String getTextLine1()
@@ -83,6 +83,21 @@ public class miTriviaProcessing
       }
    }
 
+   public void handleDefaultEntry()
+   {
+      if (theState == menuInterface.miState.DisplayQuestion)
+      {
+         theState = menuInterface.miState.DisplayAnswer;
+         NetStudy.getQuestionManager().setDisplayAnser(true);
+      }
+      else
+      {
+         theState = menuInterface.miState.DisplayQuestion;
+         NetStudy.getQuestionManager().setDisplayAnser(false);
+         NetStudy.getQuestionManager().incrementTriviaQuestionNum();
+      }
+   }
+
    //
    // Process the input and return a flag to the main menu
    // flag returned - true = exit program, false = keep program running
@@ -101,34 +116,18 @@ public class miTriviaProcessing
                                                                 // to string
 
       input = input.toUpperCase();
-      
+
       switch (input.charAt(0))
-         {
+      {
          case 'Q':
-            // call to Trivia
             exit = true;
             break;
 
          // input = unknown, display the answer to the question, then the next
          // question, etc.
          default:
-            if (theState == menuInterface.miState.DisplayQuestion)
-            {
-               theState = menuInterface.miState.DisplayAnswer;
-               NetStudy.getQuestionManager().setDisplayAnser(true);
-            }
-            else
-            {
-               theState = menuInterface.miState.DisplayQuestion;
-               NetStudy.getQuestionManager().setDisplayAnser(false);
-               NetStudy.getQuestionManager().incrementTriviaQuestionNum();
-            }
+            this.handleDefaultEntry();
             break;
-         }
-
-      if (exit)
-      {
-         this.reinitialize();
       }
 
       return (exit);
