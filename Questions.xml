@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Quiz>
+
+  <MultipleChoice>
+    <Question>1. How many layers are in the OSI model?</Question>
+    <ChoiceA>4</ChoiceA>
+    <ChoiceB>5</ChoiceB>
+    <ChoiceC>7</ChoiceC>
+    <ChoiceD>9</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>2. Which of the following is false about IP Addresses?</Question>
+    <ChoiceA>IP addresses are logical (not physical)</ChoiceA>
+    <ChoiceB>IP addresses are assigned a central authority</ChoiceB>
+    <ChoiceC>IP addresses have 12 bits</ChoiceC>
+    <ChoiceD>IP addresses include a network ID and a host ID</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>3. Which of the following is not a physical topology?</Question>
+    <ChoiceA>Mesh Topology</ChoiceA>
+    <ChoiceB>Star Topology</ChoiceB>
+    <ChoiceC>Bus Topology </ChoiceC>
+    <ChoiceD>Sphere Topology</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>4. What is the correct order of layers within the OSI Model?</Question>
+    <ChoiceA>Physical, session, transport, network, data link, application, presentation</ChoiceA>
+    <ChoiceB>Transport, session, network, data link, presentation, application, physical</ChoiceB>
+    <ChoiceC>Physical, data link, network, transport, session, presentation, application</ChoiceC>
+    <ChoiceD>Session, network, data link, application, presentation, physical, application</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>5. Which of the following statements are true about LANS (local area networks)</Question>
+    <ChoiceA>a. Operate within a limited geographical area</ChoiceA>
+    <ChoiceB>b. Provide full-time connectivity to local services</ChoiceB>
+    <ChoiceC>c. Both A and B</ChoiceC>
+    <ChoiceD>d. Neither</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>6. What devices are used at the network layer within the OSI model?</Question>
+    <ChoiceA>a. Ethernet Switch</ChoiceA>
+    <ChoiceB>b. Hub</ChoiceB>
+    <ChoiceC>c. Bridge</ChoiceC>
+    <ChoiceD>d. Router</ChoiceD>
+    <Answer>D</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>7. Which 2 layers do the TCP/IP and OSI have in common?</Question>
+    <ChoiceA>a. Application and session</ChoiceA>
+    <ChoiceB>b. Internet and physical</ChoiceB>
+    <ChoiceC>c. Transport and application</ChoiceC>
+    <ChoiceD>d. Data link and internet</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>8. Which ID is used for routing?</Question>
+    <ChoiceA>a. Network ID</ChoiceA>
+    <ChoiceB>b. Host ID</ChoiceB>
+    <ChoiceC>c. Both A and B</ChoiceC>
+    <ChoiceD>d. Neither</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>9. What is the formal name for "Something flowing through something to get something"?</Question>
+    <ChoiceA>Internet</ChoiceA>
+    <ChoiceB>Telephone</ChoiceB>
+    <ChoiceC>Network</ChoiceC>
+    <ChoiceD>Transportation</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>10. Which of the following does the 7th layer in the OSI model, Application, service?</Question>
+    <ChoiceA>Electronic mail</ChoiceA>
+    <ChoiceB>Data structures</ChoiceB>
+    <ChoiceC>Routers</ChoiceC>
+    <ChoiceD>Manages applications</ChoiceD>
+    <Answer>A</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>11. How many layers does the TCP/IP Model have?</Question>
+    <ChoiceA>8</ChoiceA>
+    <ChoiceB>10</ChoiceB>
+    <ChoiceC>6</ChoiceC>
+    <ChoiceD>4</ChoiceD>
+    <Answer>D</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>12. CSMA/means:</Question>
+    <ChoiceA>Carrier Session Moved Across with Collision Draft</ChoiceA>
+    <ChoiceB>Carrier Sense Multiple Access with Collision Detection</ChoiceB>
+    <ChoiceC>Cost Sensitive Multiple Actions for Company Dedication</ChoiceC>
+    <ChoiceD>None of the above</ChoiceD>
+    <Answer>B</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>13. Which answer can tell when another host transmits the same time?</Question>
+    <ChoiceA>Carrier Sense</ChoiceA>
+    <ChoiceB>Multiple Access</ChoiceB>
+    <ChoiceC>Collision Detection</ChoiceC>
+    <ChoiceD>None of the above</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>14. Frame size in 1000 bytes equals how much transmission time in microseconds?</Question>
+    <ChoiceA>51.2</ChoiceA>
+    <ChoiceB>800</ChoiceB>
+    <ChoiceC>104</ChoiceC>
+    <ChoiceD>1214</ChoiceD>
+    <Answer>B</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>15. Which of the following is not a layer in the TCP/IP model?</Question>
+    <ChoiceA>Application Layer</ChoiceA>
+    <ChoiceB>Network Access Layer</ChoiceB>
+    <ChoiceC>Transport Layer</ChoiceC>
+    <ChoiceD>Session Layer</ChoiceD>
+    <Answer>D</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>16. The "IP" in TCP/IP is which layer?</Question>
+    <ChoiceA>Layer 3: Network Layer</ChoiceA>
+    <ChoiceB>Layer 4: Application Layer</ChoiceB>
+    <ChoiceC>Layer 1 : Session Layer</ChoiceC>
+    <ChoiceD>Layer 6: Presentation Layer</ChoiceD>
+    <Answer>A</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>17. Which three layers in the OSI model are also considered Application Layers?</Question>
+    <ChoiceA>Application, Network, Transport</ChoiceA>
+    <ChoiceB>Session, Presentation, Application</ChoiceB>
+    <ChoiceC>Data Link, Physical, Transport</ChoiceC>
+    <ChoiceD>None of the above </ChoiceD>
+    <Answer>B</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>18. Which layers of the TCP/IP model are considered Networks?</Question>
+    <ChoiceA>Application and Transport</ChoiceA>
+    <ChoiceB>Internet and Transport</ChoiceB>
+    <ChoiceC>Network Access and Internet</ChoiceC>
+    <ChoiceD>Application and Transport</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>19. What does ARP stand for?</Question>
+    <ChoiceA>Activate Readiness Position</ChoiceA>
+    <ChoiceB>Active Routing Protocol</ChoiceB>
+    <ChoiceC>Address Resolution Protocol</ChoiceC>
+    <ChoiceD>None of the above</ChoiceD>
+    <Answer>C</Answer>
+  </MultipleChoice>
+  <MultipleChoice>
+    <Question>20. Which of the following answers is incorrect about LANS (Local Area Networks)?</Question>
+    <ChoiceA>Error Detection</ChoiceA>
+    <ChoiceB>Full-time Connectivity</ChoiceB>
+    <ChoiceC>Multi-access</ChoiceC>
+    <ChoiceD>Limited geographic area</ChoiceD>
+    <Answer>A</Answer>
+  </MultipleChoice>
+
+  <TrueFalse>
+    <Question>1. Bridges and Repeaters can be combined?</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>2. Active Hubs can be networked in a tree topology</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>3. You cannot run a Web server on a Windows client operating system, such as Windows 2000 Professional or Windows XP</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>4. In standard hosting, your site resides on the same computer with many other sites.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>5. Cable modems do not share access with other users in the same area.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>6. One limitation of all varieties of DSL is signal degradation.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>7. One of the advantages of e-mail servers is that they are very secure and prevent anything harmful from entering the system.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>8. The Internet is centrally controlled.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>9. NAP stands for network access point.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>10. Web servers typically listen at port 880.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>11. When the browser retrieves the Web page from the Web server, it first reads the header, which contains information about the page.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>12. When you send e-mail, the recipient does not have to be online when the message is sent.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>13. Using the Refresh meta tag, you can reload a web page over itself.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>14. SSL was developed by Microsoft.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>15. A firewall is a security system that acts as a protective boundary between a  network and the outside world.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>16. E-mail servers can easily handle a series of very large e-mail messages.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>17. A firewall prevents e-mail viruses.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>18. Meta data is the data which search engines and browsers use to characterize and categorize web pages.</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>19. Base64 encoding is an encryption type.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>20. A request occurs when a web server is asked to provide a page, graphic or other object. This is frequently called a Hit.</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>21. Layer 2, Data Link, is also known as Access to Media:</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>22. Carrier Sense: Can tell when another host is transmitting?</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>23. Multiple Access: Many hosts on 5 wires?</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>24. Full Duplex Ethernet has the CSMA/CA?</Question>
+    <Answer>F</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>25. "IP" stand for Internet Protocol?</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>26. Host IDs are assigned locally by a system administrator:</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>27. IP addresses are usually shown in a dotted decimal notation (i.e 1.2.3.4)</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+  <TrueFalse>
+    <Question>28. It is possible to have a single wire network with multiple subnets?</Question>
+    <Answer>T</Answer>
+  </TrueFalse>
+
+  <Trivia>
+    <Question>1. How many layers are in the OSI model?</Question>
+    <Answer>7</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>2. Do IP Addresses have 12 bits?</Question>
+    <Answer>No</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>3. Can Bridges and Repeaters be combined?</Question>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>4. Is Sphere Topology a physical topology?</Question>
+    <Answer>No</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>5. Can Active Hubs be networked in a tree topology?</Question>
+    <Answer>Yes</Answer></Trivia>
+
+</Quiz>
