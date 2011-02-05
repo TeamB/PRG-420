@@ -33,7 +33,6 @@ public class questionManager
    //
    public questionManager()
    {
-      ;
    }
 
    //
