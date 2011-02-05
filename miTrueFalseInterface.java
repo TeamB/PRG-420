@@ -16,7 +16,7 @@ public class miTrueFalseInterface
    protected boolean exit;
    protected int userInput;
    miTrueFalseProcessing theInputProcessor;
-   
+
    //
    // Constructor
    //
@@ -24,7 +24,7 @@ public class miTrueFalseInterface
    {
       theInputProcessor = new miTrueFalseProcessing();
    }
-   
+
    //
    // Print 79 stars, screen width assumed is 80 characters
    //
@@ -56,18 +56,18 @@ public class miTrueFalseInterface
    {
       NetStudy.getQuestionManager().setDisplayAnser(false);
       theInputProcessor.reinitialize();
-      theInputProcessor = null; //delete this object
+      theInputProcessor = null; // delete this object
    }
-   
+
    public void printMenu()
    {
       theInputProcessor.processData();
-      
+
       //
       // Used to format score
       //
       DecimalFormat df1 = new DecimalFormat("###,##0.00");
-      
+
       //
       // Print menu
       //
@@ -82,8 +82,8 @@ public class miTrueFalseInterface
       System.out.println("*   " + theInputProcessor.getTextLine1());// 16
       System.out.println("*   " + theInputProcessor.getTextLine2()); // 17
       this.printSingleStar();// 18
-      System.out.println("*   Answer: " + theInputProcessor.getAnswer() + 
-            "   Your Answer: " +  theInputProcessor.getDisplayAnswer() + 
+      System.out.println("*   Answer: " + theInputProcessor.getAnswer() +
+            "   Your Answer: " + theInputProcessor.getDisplayAnswer() +
             "   Your Score: " + df1.format(theInputProcessor.getScore()) + "%");// 19
       this.printSingleStar();// 15
       this.printSingleStar();// 21
@@ -95,10 +95,17 @@ public class miTrueFalseInterface
       }
       else
       {
-         System.out.print("  Please enter T for True and F for false or q to quit: ");// 24
+         if (theInputProcessor.getAskAgainFlag())
+         {
+            System.out.print("  Try Again! Please enter T for True and F for false or q to quit: ");// 24
+         }
+         else
+         {
+            System.out.print("  Please enter T for True and F for false or q to quit: ");// 24
+         }
       }
    }
-   
+
    //
    // Control main menu
    //
