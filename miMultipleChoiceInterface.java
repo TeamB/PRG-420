@@ -6,10 +6,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-public class miMultipleChoiceInterface
-{
-   public void menu()
-   {
+public class miMultipleChoiceInterface {
+	public void menu() {
 
-   }
+	}
 }

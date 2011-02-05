@@ -6,30 +6,26 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-public class qTrueFalse extends question
-{
-   protected char theAnswer;
+public class qTrueFalse extends question {
+	protected char theAnswer;
 
-   //
-   // Constructor
-   //
-   public qTrueFalse(String question, char answer)
-   {
-      theQuestion = question;
-      theAnswer = answer;
-   }
+	//
+	// Constructor
+	//
+	public qTrueFalse(String question, char answer) {
+		theQuestion = question;
+		theAnswer = answer;
+	}
 
-   //
-   // Set and Get routines
-   //
+	//
+	// Set and Get routines
+	//
 
-   public char getAnswer()
-   {
-      return (theAnswer);
-   }
+	public char getAnswer() {
+		return (theAnswer);
+	}
 
-   public void setAnswer(char answer)
-   {
-      theAnswer = answer;
-   }
+	public void setAnswer(char answer) {
+		theAnswer = answer;
+	}
 }
