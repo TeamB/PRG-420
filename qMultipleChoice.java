@@ -17,7 +17,12 @@ public class qMultipleChoice extends question
    //
    // Constructor
    //
-   public qMultipleChoice(String question, String the1stChoice, String the2ndChoice, String the3rdChoice, String the4thChoice, char theAnswer)
+   public qMultipleChoice(String question,
+                          String the1stChoice,
+                          String the2ndChoice,
+                          String the3rdChoice,
+                          String the4thChoice,
+                          char theAnswer)
    {
       theQuestion = question;
       choice1 = the1stChoice;
