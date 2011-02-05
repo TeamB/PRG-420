@@ -104,8 +104,7 @@ public class miNetworkQuizInterface
 
          exit = theInputProcessor.processInputs(userInput);
 
-      }
-      while (!exit);
+      } while (!exit)
 
       //
       // Clear the screen
