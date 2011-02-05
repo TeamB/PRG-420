@@ -19,6 +19,7 @@ public class miTrueFalseProcessing
    protected menuInterface.miState theState = menuInterface.miState.DisplayQuestion;
    protected int numCorrectAnswers = 0, numQuestionsAsked = 0;
    protected float score = 0;
+   protected boolean askAgainFlag;
 
    //
    // Constructor
@@ -35,6 +36,7 @@ public class miTrueFalseProcessing
       numCorrectAnswers = 0;
       numQuestionsAsked = 0;
       score = 0;
+      askAgainFlag = false;
    }
 
    public Boolean getDisplayAnserStatus()
@@ -70,6 +72,11 @@ public class miTrueFalseProcessing
          ret = userInput;
       }
       return (ret);
+   }
+   
+   public boolean getAskAgainFlag()
+   {
+      return(askAgainFlag);
    }
 
    public void processData()
@@ -113,7 +120,7 @@ public class miTrueFalseProcessing
       // check for divide by zero
       if (numQuestionsAsked > 0)
       {
-         score =  (float) (100.0 * ((float)numCorrectAnswers / (float)numQuestionsAsked));
+         score = (float) (100.0 * ((float) numCorrectAnswers / (float) numQuestionsAsked));
       }
    }
 
@@ -124,7 +131,7 @@ public class miTrueFalseProcessing
       return (result);
    }
 
-   private void handleDefaultEntry()
+   private void handleStateChange()
    {
       if (theState == menuInterface.miState.DisplayQuestion)
       {
@@ -163,8 +170,9 @@ public class miTrueFalseProcessing
          case 'Q':
             exit = true;
             break;
-
-         default:
+            
+         case 'T':
+         case 'F':
             if (!this.getDisplayAnserStatus())
             {
                // save the answer for display
@@ -176,7 +184,21 @@ public class miTrueFalseProcessing
                }
                numQuestionsAsked++;
             }
-            this.handleDefaultEntry();
+            this.handleStateChange();
+            askAgainFlag = false;
+            break;
+
+         default:
+            if(this.getDisplayAnserStatus())
+            {
+               this.handleStateChange();
+            }
+            else
+            {
+               System.out.println("display again");
+               //if the user did not enter a 'T' or 'F' ask for answer again
+               askAgainFlag = true;
+            }
             break;
       }
 
