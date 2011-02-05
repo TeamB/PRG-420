@@ -6,7 +6,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-//import java.text.DecimalFormat;
+// import java.text.DecimalFormat;
 import java.io.*;
 import java.io.IOException;
 
@@ -104,8 +104,7 @@ public class miMainMenuInterface
 
          exit = theInputProcessor.processInputs(userInput);
 
-      }
-      while (!exit);
+      } while (!exit);
 
       //
       // Clear the screen

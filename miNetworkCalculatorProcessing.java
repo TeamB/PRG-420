@@ -44,9 +44,9 @@ public class miNetworkCalculatorProcessing
                                                                    // to string
 
          input = input.toUpperCase();
-         
+
          switch (input.charAt(0))
-            {
+         {
             case 'N':
                this.reinitialize();
                break;
@@ -54,11 +54,11 @@ public class miNetworkCalculatorProcessing
             case 'Q':
                exit = true;
                break;
-               
+
             // input = unknown, display main menu again
             default:
                break;
-            }
+         }
       }
 
       else
@@ -77,7 +77,6 @@ public class miNetworkCalculatorProcessing
          }
          catch (IOException e)
          {
-            // TODO Auto-generated catch block
             e.printStackTrace();
          }
 
@@ -110,12 +109,12 @@ public class miNetworkCalculatorProcessing
       }
       return (exit);
    }
-   
+
    public networkCalculator getCalculation()
    {
       return (myCalculation);
    }
-   
+
    public boolean isCalculationNull()
    {
       return (myCalculation == null);
@@ -123,19 +122,16 @@ public class miNetworkCalculatorProcessing
 
    public boolean askForIP()
    {
-      // TODO Auto-generated method stub
       return (state == menuInterface.miCalcState.getIP);
    }
 
    public boolean askForSubnetMask()
    {
-      // TODO Auto-generated method stub
       return (state == menuInterface.miCalcState.getSubnetMask);
    }
 
    public boolean displayAnswer()
    {
-      // TODO Auto-generated method stub
       return (state == menuInterface.miCalcState.displayOutputs);
    }
 

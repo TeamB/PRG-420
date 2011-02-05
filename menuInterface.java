@@ -27,9 +27,8 @@ public class menuInterface
    //
    public menuInterface()
    {
-      ;
    }
-   
+
    public void printBanner()
    {
       System.out.println("*    ****     **           **     ********  **                **         ");// 3

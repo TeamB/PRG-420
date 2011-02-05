@@ -5,6 +5,7 @@
 // Child question class for the network study questions, true/false
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 public class qTrueFalse extends question
 {
    protected char theAnswer;

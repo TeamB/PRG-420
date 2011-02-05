@@ -6,7 +6,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-//import java.text.DecimalFormat;
+// import java.text.DecimalFormat;
 import java.io.*;
 
 public class miNetworkQuizInterface

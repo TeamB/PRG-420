@@ -1,7 +1,3 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 ////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
@@ -9,6 +5,10 @@ import java.io.InputStreamReader;
 // User interface to the network calculator.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class miNetowkCalculatorInterface
 {
@@ -44,7 +44,7 @@ public class miNetowkCalculatorInterface
       NetStudy.getMenuInterface().printBanner();// 3 - 10
       System.out.println("*                     Network Study Tool");// 11
       this.printSingleStar();// 12
-      if(displayAnswer)
+      if (displayAnswer)
       {
          System.out.println("*                Network Calculator - Answer");// 13
       }
@@ -68,11 +68,11 @@ public class miNetowkCalculatorInterface
 
       if (askForIP)
       {
-         System.out.print("Enter an IP address (default: 192.168.0.1):  ");//24
+         System.out.print("Enter an IP address (default: 192.168.0.1):  ");// 24
       }
       else if (askForSubnetMask)
       {
-         System.out.print("Enter the # of bits for the subnet mask [8 - 30] or [0] for classful: ");//24
+         System.out.print("Enter the # of bits for the subnet mask [8 - 30] or [0] for classful: ");// 24
       }
       else
       {
@@ -81,17 +81,17 @@ public class miNetowkCalculatorInterface
          //
          if (!(theInputProcessor.isCalculationNull()))
          {
-            System.out.println("*     IP Address: " + theInputProcessor.getCalculation().showIp());//14
-            System.out.println("*         Subnet: " + theInputProcessor.getCalculation().showSubnet());//15
-            System.out.println("* ");//16
-            System.out.println("*        Network: " + theInputProcessor.getCalculation().showNetwork());//17
-            System.out.println("*      Broadcast: " + theInputProcessor.getCalculation().showBroadcast());//18
-            this.printSingleStar();//19
-            System.out.println("*  Hosts Avaliable: " + theInputProcessor.getCalculation().numberOfAddresses());//20
-            this.printStars();//21
+            System.out.println("*     IP Address: " + theInputProcessor.getCalculation().showIp());// 14
+            System.out.println("*         Subnet: " + theInputProcessor.getCalculation().showSubnet());// 15
+            System.out.println("* ");// 16
+            System.out.println("*        Network: " + theInputProcessor.getCalculation().showNetwork());// 17
+            System.out.println("*      Broadcast: " + theInputProcessor.getCalculation().showBroadcast());// 18
+            this.printSingleStar();// 19
+            System.out.println("*  Hosts Avaliable: " + theInputProcessor.getCalculation().numberOfAddresses());// 20
+            this.printStars();// 21
          }
-         System.out.println("");//22
-         System.out.print("Enter n for a new calculation or q to quit: "); //24
+         System.out.println("");// 22
+         System.out.print("Enter n for a new calculation or q to quit: "); // 24
       }
 
    }
@@ -123,8 +123,7 @@ public class miNetowkCalculatorInterface
             this.printMenu();
          }
          exit = theInputProcessor.processInputs(userInput);
-      }
-      while (!exit);
+      } while (!exit);
 
       theInputProcessor.reinitialize();
 

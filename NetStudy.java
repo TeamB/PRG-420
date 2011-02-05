@@ -22,7 +22,7 @@ public class NetStudy
       //
       // Run the user interface
       //
-      
+
       theMenu.run();
    }
 
@@ -30,7 +30,7 @@ public class NetStudy
    {
       return (theQuestionManager);
    }
-   
+
    public static menuInterface getMenuInterface()
    {
       return (theMenu);
