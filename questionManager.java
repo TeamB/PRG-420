@@ -75,9 +75,6 @@ public class questionManager
 
    public qTrivia getTriviaQuestion(int i)
    {
-      //
-      // return a Trivia question to the Network Study Quiz interface
-      //
       return (triviaList[i]);
    }
 
