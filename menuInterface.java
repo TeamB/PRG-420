@@ -11,12 +11,15 @@ public class menuInterface
 
    public enum miState
    {
-      DisplayQuestion, DisplayAnswer
+      DisplayQuestion,
+      DisplayAnswer
    }
 
    public enum miCalcState
    {
-      getIP, getSubnetMask, displayOutputs
+      getIP,
+      getSubnetMask,
+      displayOutputs
    }
 
    //
