@@ -1,10 +1,10 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // User interface to the main menu.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // import java.text.DecimalFormat;
 import java.io.*;
@@ -12,9 +12,9 @@ import java.io.IOException;
 
 public class miMainMenuInterface
 {
-   protected boolean exit;
-   protected int userInput;
-   protected miMainMenuProcessing theInputProcessor;
+   private boolean exit;
+   private int userInput;
+   private miMainMenuProcessing theInputProcessor;
 
    //
    // Constructor
@@ -31,8 +31,7 @@ public class miMainMenuInterface
    //
    private void printStars()
    {
-      System.out
-            .println("*******************************************************************************");
+      System.out.println("*******************************************************************************");
    }
 
    //
@@ -90,8 +89,7 @@ public class miMainMenuInterface
 
          this.printMainMenu();
 
-         BufferedReader br = new BufferedReader(new InputStreamReader(
-               System.in));
+         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
          try
          {

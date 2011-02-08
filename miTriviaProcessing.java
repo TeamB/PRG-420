@@ -1,20 +1,20 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Process data and user inputs for Trivia Menu.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 public class miTriviaProcessing
 {
-   protected boolean theQuestionNeedsMoreLines = false;
-   protected questionManager qmPtr;
-   protected int theQuestionNum = 0;
-   protected String questionTextLine1;
-   protected String questionTextLine2;
-   protected String answer;
-   protected menuInterface.miState theState = menuInterface.miState.DisplayQuestion;
+   private boolean theQuestionNeedsMoreLines = false;
+   private questionManager qmPtr;
+   private int theQuestionNum = 0;
+   private String questionTextLine1;
+   private String questionTextLine2;
+   private String answer;
+   private menuInterface.miState theState = menuInterface.miState.DisplayQuestion;
 
    //
    // Constructor
@@ -49,8 +49,7 @@ public class miTriviaProcessing
    {
       qmPtr = NetStudy.getQuestionManager();
       theQuestionNum = qmPtr.getTriviaQuestionNum();
-      String questionText = qmPtr.getTriviaQuestion(theQuestionNum)
-            .getQuestion();
+      String questionText = qmPtr.getTriviaQuestion(theQuestionNum).getQuestion();
 
       answer = "";
 
@@ -70,8 +69,7 @@ public class miTriviaProcessing
          questionTextLine1 = (String) questionText.subSequence(0, 75);
          lastSpace = questionTextLine1.lastIndexOf(" ");
          questionTextLine1 = (String) questionText.subSequence(0, lastSpace);
-         questionTextLine2 = (String) questionText.subSequence(
-               (lastSpace + 1), (questionText.length() - 1));
+         questionTextLine2 = (String) questionText.subSequence((lastSpace + 1), (questionText.length()));
       } else
       {
          questionTextLine1 = questionText;
@@ -120,15 +118,15 @@ public class miTriviaProcessing
 
       switch (input.charAt(0))
       {
-      case 'Q':
-         exit = true;
-         break;
+         case 'Q':
+            exit = true;
+            break;
 
-      // input = unknown, display the answer to the question, then the next
-      // question, etc.
-      default:
-         this.handleDefaultEntry();
-         break;
+         // input = unknown, display the answer to the question, then the next
+         // question, etc.
+         default:
+            this.handleDefaultEntry();
+            break;
       }
 
       return (exit);

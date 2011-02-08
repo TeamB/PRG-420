@@ -1,10 +1,10 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Calculations for the network calculator.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 public class networkCalculator
 {
@@ -126,12 +126,6 @@ public class networkCalculator
       calcNetwork();
    }
 
-   {
-      java.text.DecimalFormat dd = new java.text.DecimalFormat("  0");
-      s_ipaddress = dd.format(ipOctet1) + "." + dd.format(ipOctet2) + "."
-            + dd.format(ipOctet3) + "." + dd.format(ipOctet4) + ".";
-   }
-
    private void sub2octet(String sn)
    {
       String[] arrSn = sn.split("[.]");
@@ -171,8 +165,7 @@ public class networkCalculator
       net3 = (short) (ipSubNet3 & ipOctet3);
       net4 = (short) (ipSubNet4 & ipOctet4);
 
-      s_Network = Short.toString(net1) + "." + Short.toString(net2) + "."
-            + Short.toString(net3) + "." + Short.toString(net4);
+      s_Network = Short.toString(net1) + "." + Short.toString(net2) + "." + Short.toString(net3) + "." + Short.toString(net4);
 
       calcBroadcast();
       calcNumberOfAddresses();
@@ -210,10 +203,7 @@ public class networkCalculator
       broad3 = (short) (i3 | ipOctet3);
       broad4 = (short) (i4 | ipOctet4);
 
-      s_Broadcast = Integer.toString(i1 | ipOctet1) + "."
-            + Integer.toString(i2 | ipOctet2) + "."
-            + Integer.toString(i3 | ipOctet3) + "."
-            + Integer.toString(i4 | ipOctet4);
+      s_Broadcast = Integer.toString(i1 | ipOctet1) + "." + Integer.toString(i2 | ipOctet2) + "." + Integer.toString(i3 | ipOctet3) + "." + Integer.toString(i4 | ipOctet4);
 
    }
 

@@ -163,15 +163,15 @@
   </MultipleChoice>
 
   <TrueFalse>
-    <Question>1. Bridges and Repeaters can be combined?</Question>
+    <Question>1. Can Bridges and Repeaters can be combined?</Question>
     <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
-    <Question>2. Active Hubs can be networked in a tree topology</Question>
+    <Question>2. Can Active Hubs be networked in a tree topology?</Question>
     <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
-    <Question>3. You cannot run a Web server on a Windows client operating system, such as Windows 2000 Professional or Windows XP</Question>
+    <Question>3. You cannot run a Web server on a Windows client operating system, such as Windows 2000 Professional or Windows XP.</Question>
     <Answer>F</Answer>
   </TrueFalse>
   <TrueFalse>
@@ -267,7 +267,7 @@
     <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
-    <Question>27. IP addresses are usually shown in a dotted decimal notation (i.e 1.2.3.4)</Question>
+    <Question>27. IP addresses are usually shown in a dotted decimal notation (i.e 1.2.3.4)?</Question>
     <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
@@ -293,6 +293,63 @@
   </Trivia>
   <Trivia>
     <Question>5. Can Active Hubs be networked in a tree topology?</Question>
-    <Answer>Yes</Answer></Trivia>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>6. Can you run a Web server on a Windows client operating system, such as Windows 2000 Professional or Windows XP?</Question>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>7. In standard hosting, your site can reside on the same computer with many other sites.</Question>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>8. Do cable modems share access with other users in the same area.</Question>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>9. Signal Degradation is one limitation of all varieties of DSL.</Question>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>10. Is one of the advantages of e-mail servers is they can prevent anything harmful from entering the system?</Question>
+    <Answer>Yes</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>11. Is the Internet is centrally controlled?</Question>
+    <Answer>No</Answer>
+  </Trivia>
+  <Trivia>
+    <Question>12. What does NAP stands for?</Question>
+    <Answer>Network Access Point</Answer>
+  </Trivia>
+<!--  <Trivia>
+    <Question>14. </Question>
+    <Answer></Answer>
+  </Trivia>
+  <Trivia>
+    <Question>15. </Question>
+    <Answer></Answer>
+  </Trivia>
+  <Trivia>
+    <Question>16. </Question>
+    <Answer></Answer>
+  </Trivia>
+  <Trivia>
+    <Question>17. </Question>
+    <Answer></Answer>
+  </Trivia>
+  <Trivia>
+    <Question>18. </Question>
+    <Answer></Answer>
+  </Trivia>
+  <Trivia>
+    <Question>19. </Question>
+    <Answer></Answer>
+  </Trivia>
+  <Trivia>
+    <Question>20. </Question>
+    <Answer></Answer>
+  </Trivia>-->
 
 </Quiz>

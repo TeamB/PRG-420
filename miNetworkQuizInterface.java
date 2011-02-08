@@ -1,19 +1,19 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // User interface to the network quiz.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // import java.text.DecimalFormat;
 import java.io.*;
 
 public class miNetworkQuizInterface
 {
-   protected boolean exit;
-   protected int userInput;
-   protected miNetworkQuizProcessing theInputProcessor;
+   private boolean exit;
+   private int userInput;
+   private miNetworkQuizProcessing theInputProcessor;
 
    //
    // Constructor
@@ -30,8 +30,7 @@ public class miNetworkQuizInterface
    //
    private void printStars()
    {
-      System.out
-            .println("*******************************************************************************");
+      System.out.println("*******************************************************************************");
    }
 
    //
@@ -72,8 +71,7 @@ public class miNetworkQuizInterface
       System.out.println("*  Select option to continue");// 17
       System.out.println("*   1. " + theInputProcessor.getTriviaMenuLabel());// 18
       System.out.println("*   2. " + theInputProcessor.getTrueFalseLabel());// 19
-      System.out.println("*   3. "
-            + theInputProcessor.getMultipleChoiceLabel());// 20
+      System.out.println("*   3. " + theInputProcessor.getMultipleChoiceLabel());// 20
       this.printSingleStar();// 21
       this.printStars();// 22
       System.out.println("");// 23
@@ -91,8 +89,7 @@ public class miNetworkQuizInterface
 
          this.printMenu();
 
-         BufferedReader br = new BufferedReader(new InputStreamReader(
-               System.in));
+         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
          try
          {
@@ -100,8 +97,7 @@ public class miNetworkQuizInterface
          } catch (IOException e)
          {
             // print out user input error
-            System.out
-                  .println("User input error in Network Quiz Menu Interface");
+            System.out.println("User input error in Network Quiz Menu Interface");
             e.printStackTrace();
          }
 

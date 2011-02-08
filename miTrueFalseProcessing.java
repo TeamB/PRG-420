@@ -1,26 +1,26 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Process data and user inputs for True/False Menu.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 public class miTrueFalseProcessing
 {
-   protected questionManager qmPtr;
-   protected int theQuestionNum = 0;
-   protected boolean theQuestionNeedsMoreLines = false;
-   protected String questionTextLine1;
-   protected String questionTextLine2;
-   protected String answerString; // used to display the answer
-   protected String answerData; // used to check the answer against the user
+   private questionManager qmPtr;
+   private int theQuestionNum = 0;
+   private boolean theQuestionNeedsMoreLines = false;
+   private String questionTextLine1;
+   private String questionTextLine2;
+   private String answerString; // used to display the answer
+   private String answerData; // used to check the answer against the user
    // input
-   protected String userInput; // used to display the user input answer
-   protected menuInterface.miState theState = menuInterface.miState.DisplayQuestion;
-   protected int numCorrectAnswers = 0, numQuestionsAsked = 0;
-   protected float score = 0;
-   protected boolean askAgainFlag;
+   private String userInput; // used to display the user input answer
+   private menuInterface.miState theState = menuInterface.miState.DisplayQuestion;
+   private int numCorrectAnswers = 0, numQuestionsAsked = 0;
+   private float score = 0;
+   private boolean askAgainFlag;
 
    //
    // Constructor
@@ -84,10 +84,8 @@ public class miTrueFalseProcessing
    {
       qmPtr = NetStudy.getQuestionManager();
       theQuestionNum = qmPtr.getTrueFalseQuestionNum();
-      answerData = String.valueOf(qmPtr.getTrueFalseQuestion(theQuestionNum)
-            .getAnswer());
-      String questionText = qmPtr.getTrueFalseQuestion(theQuestionNum)
-            .getQuestion();
+      answerData = String.valueOf(qmPtr.getTrueFalseQuestion(theQuestionNum).getAnswer());
+      String questionText = qmPtr.getTrueFalseQuestion(theQuestionNum).getQuestion();
 
       answerString = " ";
 
@@ -107,8 +105,7 @@ public class miTrueFalseProcessing
          questionTextLine1 = (String) questionText.subSequence(0, 75);
          lastSpace = questionTextLine1.lastIndexOf(" ");
          questionTextLine1 = (String) questionText.subSequence(0, lastSpace);
-         questionTextLine2 = (String) questionText.subSequence(
-               (lastSpace + 1), (questionText.length() - 1));
+         questionTextLine2 = (String) questionText.subSequence((lastSpace + 1), (questionText.length()));
       } else
       {
          questionTextLine1 = questionText;
@@ -170,38 +167,38 @@ public class miTrueFalseProcessing
 
       switch (input.charAt(0))
       {
-      case 'Q':
-         exit = true;
-         break;
+         case 'Q':
+            exit = true;
+            break;
 
-      case 'T':
-      case 'F':
-         if (!this.getDisplayAnserStatus())
-         {
-            // save the answer for display
-            userInput = input;
-            // if the answer is correct
-            if (this.processAnswerEntry(input))
+         case 'T':
+         case 'F':
+            if (!this.getDisplayAnserStatus())
             {
-               numCorrectAnswers++;
+               // save the answer for display
+               userInput = input;
+               // if the answer is correct
+               if (this.processAnswerEntry(input))
+               {
+                  numCorrectAnswers++;
+               }
+               numQuestionsAsked++;
             }
-            numQuestionsAsked++;
-         }
-         this.handleStateChange();
-         askAgainFlag = false;
-         break;
-
-      default:
-         if (this.getDisplayAnserStatus())
-         {
             this.handleStateChange();
-         } else
-         {
-            System.out.println("display again");
-            // if the user did not enter a 'T' or 'F' ask for answer again
-            askAgainFlag = true;
-         }
-         break;
+            askAgainFlag = false;
+            break;
+
+         default:
+            if (this.getDisplayAnserStatus())
+            {
+               this.handleStateChange();
+            } else
+            {
+               System.out.println("display again");
+               // if the user did not enter a 'T' or 'F' ask for answer again
+               askAgainFlag = true;
+            }
+            break;
       }
 
       return (exit);

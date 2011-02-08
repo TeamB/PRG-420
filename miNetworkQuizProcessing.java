@@ -1,19 +1,19 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Process inputs to network quiz menu.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 public class miNetworkQuizProcessing
 {
-   miTriviaInterface triviaMenu;
-   miTrueFalseInterface trueFalseMenu;
-   miMultipleChoiceInterface multipleChoiceMenu;
-   boolean printTriviaOption = false;
-   boolean printTrueFalseOption = false;
-   boolean printMultipleChoiceOption = false;
+   private miTriviaInterface triviaMenu;
+   private miTrueFalseInterface trueFalseMenu;
+   private miMultipleChoiceInterface multipleChoiceMenu;
+   private boolean printTriviaOption = false;
+   private boolean printTrueFalseOption = false;
+   private boolean printMultipleChoiceOption = false;
 
    //
    // Constructor
@@ -91,40 +91,40 @@ public class miNetworkQuizProcessing
 
       switch (input.charAt(0))
       {
-      case '1':
-         if (printTriviaOption)
-         {
-            // call to Trivia
-            triviaMenu = new miTriviaInterface();
-            triviaMenu.menu();
-         }
-         break;
+         case '1':
+            if (printTriviaOption)
+            {
+               // call to Trivia
+               triviaMenu = new miTriviaInterface();
+               triviaMenu.menu();
+            }
+            break;
 
-      case '2':
-         if (printTrueFalseOption)
-         {
-            // call to True/False
-            trueFalseMenu = new miTrueFalseInterface();
-            trueFalseMenu.menu();
-         }
-         break;
+         case '2':
+            if (printTrueFalseOption)
+            {
+               // call to True/False
+               trueFalseMenu = new miTrueFalseInterface();
+               trueFalseMenu.menu();
+            }
+            break;
 
-      case '3':
-         if (printMultipleChoiceOption)
-         {
-            // call to Multiple Choice
-            multipleChoiceMenu = new miMultipleChoiceInterface();
-            multipleChoiceMenu.menu();
-         }
-         break;
+         case '3':
+            if (printMultipleChoiceOption)
+            {
+               // call to Multiple Choice
+               multipleChoiceMenu = new miMultipleChoiceInterface();
+               multipleChoiceMenu.menu();
+            }
+            break;
 
-      case 'Q':
-         exit = true;
-         break;
+         case 'Q':
+            exit = true;
+            break;
 
-      // input = unknown, display main menu again
-      default:
-         break;
+         // input = unknown, display main menu again
+         default:
+            break;
       }
 
       return (exit);

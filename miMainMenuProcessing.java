@@ -1,15 +1,15 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Process inputs to main menu.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 public class miMainMenuProcessing
 {
-   protected miNetworkQuizInterface networkQuiz;
-   protected miNetowkCalculatorInterface networkCalc;
+   private miNetworkQuizInterface networkQuiz;
+   private miNetowkCalculatorInterface networkCalc;
 
    //
    // Constructor
@@ -39,24 +39,24 @@ public class miMainMenuProcessing
 
       switch (input.charAt(0))
       {
-      case '1':
-         // call to studyQuizInterface
-         networkQuiz = new miNetworkQuizInterface();
-         networkQuiz.menu();
-         break;
+         case '1':
+            // call to studyQuizInterface
+            networkQuiz = new miNetworkQuizInterface();
+            networkQuiz.menu();
+            break;
 
-      case '2':
-         // call to networkCalculatorInterface
-         networkCalc = new miNetowkCalculatorInterface();
-         networkCalc.menu();
-         break;
+         case '2':
+            // call to networkCalculatorInterface
+            networkCalc = new miNetowkCalculatorInterface();
+            networkCalc.menu();
+            break;
 
-      case 'Q':
-         exit = true;
-         break;
-      // input = unknown, display main menu again
-      default:
-         break;
+         case 'Q':
+            exit = true;
+            break;
+         // input = unknown, display main menu again
+         default:
+            break;
       }
 
       return (exit);

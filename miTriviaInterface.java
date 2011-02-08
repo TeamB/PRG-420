@@ -1,18 +1,18 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // User interface to the trivia questions quiz.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 import java.io.*;
 
 public class miTriviaInterface
 {
-   protected boolean exit;
-   protected int userInput;
-   protected miTriviaProcessing theInputProcessor;
+   private boolean exit;
+   private int userInput;
+   private miTriviaProcessing theInputProcessor;
 
    //
    // Constructor
@@ -29,8 +29,7 @@ public class miTriviaInterface
    //
    private void printStars()
    {
-      System.out
-            .println("*******************************************************************************");
+      System.out.println("*******************************************************************************");
    }
 
    //
@@ -96,8 +95,7 @@ public class miTriviaInterface
 
          this.printMenu();
 
-         BufferedReader br = new BufferedReader(new InputStreamReader(
-               System.in));
+         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
          try
          {

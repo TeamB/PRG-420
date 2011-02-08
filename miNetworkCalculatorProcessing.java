@@ -1,10 +1,10 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Processing for the network calculator.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -48,24 +48,23 @@ public class miNetworkCalculatorProcessing
 
          switch (input.charAt(0))
          {
-         case 'N':
-            this.reinitialize();
-            break;
+            case 'N':
+               this.reinitialize();
+               break;
 
-         case 'Q':
-            exit = true;
-            break;
+            case 'Q':
+               exit = true;
+               break;
 
-         // input = unknown, display main menu again
-         default:
-            break;
+            // input = unknown, display main menu again
+            default:
+               break;
          }
       }
 
       else
       {
-         BufferedReader inputBR = new BufferedReader(new InputStreamReader(
-               System.in));
+         BufferedReader inputBR = new BufferedReader(new InputStreamReader(System.in));
          // BufferedReader snIN = new BufferedReader(new
          // InputStreamReader(System.in));
 
@@ -95,11 +94,9 @@ public class miNetworkCalculatorProcessing
                inputSN = input;
             }
 
-            if (Integer.valueOf(inputSN) > 7
-                  && Integer.valueOf(inputSN) < 31)
+            if (Integer.valueOf(inputSN) > 7 && Integer.valueOf(inputSN) < 31)
             {
-               myCalculation = new networkCalculator(inputIP,
-                     Integer.valueOf(inputSN));
+               myCalculation = new networkCalculator(inputIP, Integer.valueOf(inputSN));
             } else
             {
                myCalculation = new networkCalculator(inputIP);

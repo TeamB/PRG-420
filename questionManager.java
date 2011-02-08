@@ -1,10 +1,10 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // Import the questions for the network study quiz.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 import java.io.File;
 
@@ -17,16 +17,16 @@ import org.xml.sax.SAXParseException;
 
 public class questionManager
 {
-   protected qMultipleChoice[] multipleChoiceList;
-   protected qTrueFalse[] trueFalseList;
-   protected qTrivia[] triviaList;
-   protected int numMultipleChoiceQ = 0;
-   protected int numTrueFalseQ = 0;
-   protected int numTriviaQ = 0;
-   protected boolean showAnswer = false;
-   protected int currentMultipleChoiceQuestion = 0;
-   protected int currentTrueFalseQuestion = 0;
-   protected int currentTriviaQuestion = 0;
+   private qMultipleChoice[] multipleChoiceList;
+   private qTrueFalse[] trueFalseList;
+   private qTrivia[] triviaList;
+   private int numMultipleChoiceQ = 0;
+   private int numTrueFalseQ = 0;
+   private int numTriviaQ = 0;
+   private boolean showAnswer = false;
+   private int currentMultipleChoiceQuestion = 0;
+   private int currentTrueFalseQuestion = 0;
+   private int currentTriviaQuestion = 0;
 
    //
    // Constructor
@@ -47,7 +47,7 @@ public class questionManager
    {
       showAnswer = b;
    }
-   
+
    //
    // Multiple Choice
    //
@@ -66,12 +66,11 @@ public class questionManager
    {
       currentMultipleChoiceQuestion = i;
    }
-   
+
    public int getMultipleChoiceQuestionNum()
    {
-      return(currentMultipleChoiceQuestion);
+      return (currentMultipleChoiceQuestion);
    }
-   
 
    //
    // True/False
@@ -175,16 +174,14 @@ public class questionManager
       try
       {
 
-         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory
-               .newInstance();
+         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
          DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
          Document doc = docBuilder.parse(new File("Questions.xml"));
 
          // normalize text representation
          doc.getDocumentElement().normalize();
 
-         NodeList listOfMPQuestions = doc
-               .getElementsByTagName("MultipleChoice");
+         NodeList listOfMPQuestions = doc.getElementsByTagName("MultipleChoice");
          numMultipleChoiceQ = listOfMPQuestions.getLength();
          multipleChoiceList = new qMultipleChoice[numMultipleChoiceQ];
 
@@ -201,59 +198,42 @@ public class questionManager
                Element firstMPQuestionElement = (Element) firstMPQuestionNode;
 
                // -------
-               NodeList QuestionList = firstMPQuestionElement
-                     .getElementsByTagName("Question");
+               NodeList QuestionList = firstMPQuestionElement.getElementsByTagName("Question");
                Element Question = (Element) QuestionList.item(0);
 
                NodeList textQuestion = Question.getChildNodes();
 
                // -------
-               NodeList AnswerAList = firstMPQuestionElement
-                     .getElementsByTagName("ChoiceA");
+               NodeList AnswerAList = firstMPQuestionElement.getElementsByTagName("ChoiceA");
                Element answerAElement = (Element) AnswerAList.item(0);
 
                NodeList textAnswerAList = answerAElement.getChildNodes();
 
                // ----
-               NodeList AnswerBList = firstMPQuestionElement
-                     .getElementsByTagName("ChoiceB");
+               NodeList AnswerBList = firstMPQuestionElement.getElementsByTagName("ChoiceB");
                Element answerBElement = (Element) AnswerBList.item(0);
 
                NodeList textAnswerBList = answerBElement.getChildNodes();
 
                // ----
-               NodeList AnswerCList = firstMPQuestionElement
-                     .getElementsByTagName("ChoiceC");
+               NodeList AnswerCList = firstMPQuestionElement.getElementsByTagName("ChoiceC");
                Element answerCElement = (Element) AnswerCList.item(0);
 
                NodeList textAnswerCList = answerCElement.getChildNodes();
 
                // ----
-               NodeList AnswerDList = firstMPQuestionElement
-                     .getElementsByTagName("ChoiceD");
+               NodeList AnswerDList = firstMPQuestionElement.getElementsByTagName("ChoiceD");
                Element answerDElement = (Element) AnswerDList.item(0);
 
                NodeList textAnswerDList = answerDElement.getChildNodes();
 
                // ----
-               NodeList correctAnswerList = firstMPQuestionElement
-                     .getElementsByTagName("Answer");
-               Element correctAnswerElement = (Element) correctAnswerList
-                     .item(0);
+               NodeList correctAnswerList = firstMPQuestionElement.getElementsByTagName("Answer");
+               Element correctAnswerElement = (Element) correctAnswerList.item(0);
 
-               NodeList textCorrectAnswerList = correctAnswerElement
-                     .getChildNodes();
+               NodeList textCorrectAnswerList = correctAnswerElement.getChildNodes();
 
-               multipleChoiceList[s] = new qMultipleChoice(
-                     ((Node) textQuestion.item(0)).getNodeValue().trim(),
-                     ((Node) textAnswerAList.item(0)).getNodeValue()
-                           .trim(), ((Node) textAnswerBList.item(0))
-                           .getNodeValue().trim(),
-                     ((Node) textAnswerCList.item(0)).getNodeValue()
-                           .trim(), ((Node) textAnswerDList.item(0))
-                           .getNodeValue().trim(),
-                     ((Node) textCorrectAnswerList.item(0))
-                           .getNodeValue().charAt(0));
+               multipleChoiceList[s] = new qMultipleChoice(((Node) textQuestion.item(0)).getNodeValue().trim(), ((Node) textAnswerAList.item(0)).getNodeValue().trim(), ((Node) textAnswerBList.item(0)).getNodeValue().trim(), ((Node) textAnswerCList.item(0)).getNodeValue().trim(), ((Node) textAnswerDList.item(0)).getNodeValue().trim(), ((Node) textCorrectAnswerList.item(0)).getNodeValue().charAt(0));
 
             }
 
@@ -276,27 +256,20 @@ public class questionManager
                Element firstRFQuestionElement = (Element) firstTFQuestionNode;
 
                // -------
-               NodeList QuestionList = firstRFQuestionElement
-                     .getElementsByTagName("Question");
+               NodeList QuestionList = firstRFQuestionElement.getElementsByTagName("Question");
                Element Question = (Element) QuestionList.item(0);
 
                NodeList textQuestion = Question.getChildNodes();
 
                // ----
-               NodeList correctAnswerList = firstRFQuestionElement
-                     .getElementsByTagName("Answer");
-               Element correctAnswerElement = (Element) correctAnswerList
-                     .item(0);
+               NodeList correctAnswerList = firstRFQuestionElement.getElementsByTagName("Answer");
+               Element correctAnswerElement = (Element) correctAnswerList.item(0);
 
-               NodeList textCorrectAnswerList = correctAnswerElement
-                     .getChildNodes();
+               NodeList textCorrectAnswerList = correctAnswerElement.getChildNodes();
 
                // ------
 
-               trueFalseList[s] = new qTrueFalse(
-                     ((Node) textQuestion.item(0)).getNodeValue().trim(),
-                     ((Node) textCorrectAnswerList.item(0))
-                           .getNodeValue().charAt(0));
+               trueFalseList[s] = new qTrueFalse(((Node) textQuestion.item(0)).getNodeValue().trim(), ((Node) textCorrectAnswerList.item(0)).getNodeValue().charAt(0));
 
             }
 
@@ -319,25 +292,18 @@ public class questionManager
                Element firstTQuestionElement = (Element) firstTQuestionNode;
 
                // -------
-               NodeList QuestionList = firstTQuestionElement
-                     .getElementsByTagName("Question");
+               NodeList QuestionList = firstTQuestionElement.getElementsByTagName("Question");
                Element Question = (Element) QuestionList.item(0);
 
                NodeList textQuestion = Question.getChildNodes();
 
                // ----
-               NodeList correctAnswerList = firstTQuestionElement
-                     .getElementsByTagName("Answer");
-               Element correctAnswerElement = (Element) correctAnswerList
-                     .item(0);
+               NodeList correctAnswerList = firstTQuestionElement.getElementsByTagName("Answer");
+               Element correctAnswerElement = (Element) correctAnswerList.item(0);
 
-               NodeList textCorrectAnswerList = correctAnswerElement
-                     .getChildNodes();
+               NodeList textCorrectAnswerList = correctAnswerElement.getChildNodes();
 
-               triviaList[s] = new qTrivia(((Node) textQuestion.item(0))
-                     .getNodeValue().trim(),
-                     ((Node) textCorrectAnswerList.item(0))
-                           .getNodeValue().trim());
+               triviaList[s] = new qTrivia(((Node) textQuestion.item(0)).getNodeValue().trim(), ((Node) textCorrectAnswerList.item(0)).getNodeValue().trim());
 
             }
 
@@ -345,8 +311,7 @@ public class questionManager
 
       } catch (SAXParseException err)
       {
-         System.out.println("** Parsing error" + ", line "
-               + err.getLineNumber() + ", uri " + err.getSystemId());
+         System.out.println("** Parsing error" + ", line " + err.getLineNumber() + ", uri " + err.getSystemId());
          System.out.println(" " + err.getMessage());
 
       } catch (SAXException e)

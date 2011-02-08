@@ -1,10 +1,10 @@
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Team B
 // PRG420
 //
 // User interface to the true/false quiz.
 //
-// //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,9 +13,9 @@ import java.text.DecimalFormat;
 
 public class miTrueFalseInterface
 {
-   protected boolean exit;
-   protected int userInput;
-   miTrueFalseProcessing theInputProcessor;
+   private boolean exit;
+   private int userInput;
+   private miTrueFalseProcessing theInputProcessor;
 
    //
    // Constructor
@@ -30,8 +30,7 @@ public class miTrueFalseInterface
    //
    private void printStars()
    {
-      System.out
-            .println("*******************************************************************************");
+      System.out.println("*******************************************************************************");
    }
 
    //
@@ -83,10 +82,7 @@ public class miTrueFalseInterface
       System.out.println("*   " + theInputProcessor.getTextLine1());// 16
       System.out.println("*   " + theInputProcessor.getTextLine2()); // 17
       this.printSingleStar();// 18
-      System.out.println("*   Answer: " + theInputProcessor.getAnswer()
-            + "   Your Answer: " + theInputProcessor.getDisplayAnswer()
-            + "   Your Score: " + df1.format(theInputProcessor.getScore())
-            + "%");// 19
+      System.out.println("*   Answer: " + theInputProcessor.getAnswer() + "   Your Answer: " + theInputProcessor.getDisplayAnswer() + "   Your Score: " + df1.format(theInputProcessor.getScore()) + "%");// 19
       this.printSingleStar();// 15
       this.printSingleStar();// 21
       this.printStars();// 22
@@ -98,12 +94,10 @@ public class miTrueFalseInterface
       {
          if (theInputProcessor.getAskAgainFlag())
          {
-            System.out
-                  .print("  Try Again! Please enter T for True and F for false or q to quit: ");// 24
+            System.out.print("  Try Again! Please enter T for True and F for false or q to quit: ");// 24
          } else
          {
-            System.out
-                  .print("  Please enter T for True and F for false or q to quit: ");// 24
+            System.out.print("  Please enter T for True and F for false or q to quit: ");// 24
          }
       }
    }
@@ -119,8 +113,7 @@ public class miTrueFalseInterface
 
          this.printMenu();
 
-         BufferedReader br = new BufferedReader(new InputStreamReader(
-               System.in));
+         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
          try
          {
