@@ -27,7 +27,6 @@ public class miTriviaProcessing
    {
       theState = menuInterface.miState.DisplayQuestion;
       NetStudy.getQuestionManager().setTriviaQuestionNum(0);
-      NetStudy.getQuestionManager().setDisplayAnser(false);
    }
 
    public String getTextLine1()
@@ -70,7 +69,8 @@ public class miTriviaProcessing
          lastSpace = questionTextLine1.lastIndexOf(" ");
          questionTextLine1 = (String) questionText.subSequence(0, lastSpace);
          questionTextLine2 = (String) questionText.subSequence((lastSpace + 1), (questionText.length()));
-      } else
+      }
+      else
       {
          questionTextLine1 = questionText;
          questionTextLine2 = "";
@@ -87,11 +87,10 @@ public class miTriviaProcessing
       if (theState == menuInterface.miState.DisplayQuestion)
       {
          theState = menuInterface.miState.DisplayAnswer;
-         NetStudy.getQuestionManager().setDisplayAnser(true);
-      } else
+      }
+      else
       {
          theState = menuInterface.miState.DisplayQuestion;
-         NetStudy.getQuestionManager().setDisplayAnser(false);
          NetStudy.getQuestionManager().incrementTriviaQuestionNum();
       }
    }
@@ -110,9 +109,7 @@ public class miTriviaProcessing
       // on
       // 1/21/11
       //
-      String input = new Character((char) selection).toString();// convert
-      // input
-      // to string
+      String input = new Character((char) selection).toString();// convert input to string
 
       input = input.toUpperCase();
 

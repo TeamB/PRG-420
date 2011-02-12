@@ -10,27 +10,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class miNetowkCalculatorInterface
+public class miNetowkCalculatorInterface extends menuInterface
 {
    private miNetworkCalculatorProcessing theInputProcessor = new miNetworkCalculatorProcessing();
    private boolean exit;
    private int userInput;
-
-   //
-   // Print 79 stars, screen width assumed is 80 characters
-   //
-   private void printStars()
-   {
-      System.out.println("*******************************************************************************");
-   }
-
-   //
-   // Print a single star
-   //
-   private void printSingleStar()
-   {
-      System.out.println("*");
-   }
 
    private void printMenu()
    {
@@ -41,13 +25,14 @@ public class miNetowkCalculatorInterface
 
       this.printStars();// 1
       this.printSingleStar();// 2
-      NetStudy.getMenuInterface().printBanner();// 3 - 10
+      this.printBanner();// 3 - 10
       System.out.println("*                     Network Study Tool");// 11
       this.printSingleStar();// 12
       if (displayAnswer)
       {
          System.out.println("*                Network Calculator - Answer");// 13
-      } else
+      }
+      else
       {
          this.printSingleStar();// 13
          System.out.println("*                     Network Calculator");// 14
@@ -62,16 +47,19 @@ public class miNetowkCalculatorInterface
          System.out.println(" ");// 20
          System.out.println(" ");// 21
          System.out.println(" ");// 22
-         System.out.println(" ");// 23
       }
 
       if (askForIP)
       {
-         System.out.print("Enter an IP address (default: 192.168.0.1):  ");// 24
-      } else if (askForSubnetMask)
+         System.out.println(" ");// 23
+         System.out.print("Enter an IP address (default: 192.168.0.1) or q to quit:  ");// 24
+      }
+      else if (askForSubnetMask)
       {
-         System.out.print("Enter the # of bits for the subnet mask [8 - 30] or [0] for classful: ");// 24
-      } else
+         System.out.println("Enter the # of bits for the subnet mask [8 - 30] or [0] for classful");// 23
+         System.out.print(" or enter q to quit: ");// 24
+      }
+      else
       {
          //
          // Print out the answer
@@ -107,13 +95,15 @@ public class miNetowkCalculatorInterface
             try
             {
                userInput = br.read();
-            } catch (IOException e)
+            }
+            catch (IOException e)
             {
                // print out user input error
                System.out.println("User input error in Main Menu Interface");
                e.printStackTrace();
             }
-         } else
+         }
+         else
          {
             this.printMenu();
          }

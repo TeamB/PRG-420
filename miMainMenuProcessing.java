@@ -32,9 +32,7 @@ public class miMainMenuProcessing
       // on
       // 1/21/11
       //
-      String input = new Character((char) selection).toString();// convert
-      // input
-      // to string
+      String input = new Character((char) selection).toString();
       input = input.toUpperCase();
 
       switch (input.charAt(0))
@@ -54,6 +52,7 @@ public class miMainMenuProcessing
          case 'Q':
             exit = true;
             break;
+            
          // input = unknown, display main menu again
          default:
             break;

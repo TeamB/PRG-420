@@ -2,7 +2,8 @@
 // Team B
 // PRG420
 //
-// Class to control the user interface and user interactions
+// Class to control the user interface and user interactions. Class also
+//   holds the common print routines.
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -11,12 +12,15 @@ public class menuInterface
 
    public enum miState
    {
-      DisplayQuestion, DisplayAnswer
+      DisplayQuestion,
+      DisplayAnswer
    }
 
    public enum miCalcState
    {
-      getIP, getSubnetMask, displayOutputs
+      getIP,
+      getSubnetMask,
+      displayOutputs
    }
 
    //
@@ -35,7 +39,31 @@ public class menuInterface
       System.out.println("*   /**  //**/**/*******  /**  ////////**  /**  /**  /** **///**   /**   ");// 7
       System.out.println("*   /**   //****/**////   /**         /**  /**  /**  /**/**  /**   **    ");// 8
       System.out.println("*   /**    //***//******  //**  ********   //** //******//******  **     ");// 9
-      System.out.println("*   //      ///  //////    //  ////////     //   //////  //////  //      ");
+      System.out.println("*   //      ///  //////    //  ////////     //   //////  //////  //      ");// 10
+   }
+   
+   public void clearScreen()
+   {
+      for (int i = 0; i < 24; i++)
+      {
+         System.out.println("");
+      }
+   }
+   
+   //
+   // Print a single star
+   //
+   public void printSingleStar()
+   {
+      System.out.println("*");
+   }
+   
+   //
+   // Print 79 stars, screen width assumed is 80 characters
+   //
+   public void printStars()
+   {
+      System.out.println("*******************************************************************************");
    }
 
    public void run()

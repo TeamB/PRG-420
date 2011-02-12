@@ -8,10 +8,13 @@
 
 import java.io.File;
 
-import org.w3c.dom.*;
-
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
@@ -23,7 +26,6 @@ public class questionManager
    private int numMultipleChoiceQ = 0;
    private int numTrueFalseQ = 0;
    private int numTriviaQ = 0;
-   private boolean showAnswer = false;
    private int currentMultipleChoiceQuestion = 0;
    private int currentTrueFalseQuestion = 0;
    private int currentTriviaQuestion = 0;
@@ -33,20 +35,13 @@ public class questionManager
    //
    public questionManager()
    {
+      parseXMLFile();
    }
 
    //
    // Set and Get routines
    //
-   public boolean displayAnswer()
-   {
-      return (showAnswer);
-   }
 
-   public void setDisplayAnser(boolean b)
-   {
-      showAnswer = b;
-   }
 
    //
    // Multiple Choice
@@ -129,7 +124,8 @@ public class questionManager
       if (currentTriviaQuestion < (numTriviaQ - 1))
       {
          currentTriviaQuestion++;
-      } else
+      }
+      else
       {
          currentTriviaQuestion = 0;
       }
@@ -140,7 +136,8 @@ public class questionManager
       if (currentTrueFalseQuestion < (numTrueFalseQ - 1))
       {
          currentTrueFalseQuestion++;
-      } else
+      }
+      else
       {
          currentTrueFalseQuestion = 0;
       }
@@ -151,15 +148,11 @@ public class questionManager
       if (currentMultipleChoiceQuestion < (numMultipleChoiceQ - 1))
       {
          currentMultipleChoiceQuestion++;
-      } else
+      }
+      else
       {
          currentMultipleChoiceQuestion = 0;
       }
-   }
-
-   public void initialize()
-   {
-      parseXMLFile();
    }
 
    //
@@ -309,17 +302,20 @@ public class questionManager
 
          }
 
-      } catch (SAXParseException err)
+      }
+      catch (SAXParseException err)
       {
          System.out.println("** Parsing error" + ", line " + err.getLineNumber() + ", uri " + err.getSystemId());
          System.out.println(" " + err.getMessage());
 
-      } catch (SAXException e)
+      }
+      catch (SAXException e)
       {
          Exception x = e.getException();
          ((x == null) ? e : x).printStackTrace();
 
-      } catch (Throwable t)
+      }
+      catch (Throwable t)
       {
          t.printStackTrace();
       }

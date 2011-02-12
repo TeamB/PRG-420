@@ -6,9 +6,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class miTriviaInterface
+public class miTriviaInterface extends menuInterface
 {
    private boolean exit;
    private int userInput;
@@ -22,33 +24,6 @@ public class miTriviaInterface
       exit = false;
       userInput = 0;
       theInputProcessor = new miTriviaProcessing();
-   }
-
-   //
-   // Print 79 stars, screen width assumed is 80 characters
-   //
-   private void printStars()
-   {
-      System.out.println("*******************************************************************************");
-   }
-
-   //
-   // Print a single star
-   //
-   private void printSingleStar()
-   {
-      System.out.println("*");
-   }
-
-   //
-   // print out 24 blank lines to clear the screen
-   //
-   private void clearScreen()
-   {
-      for (int i = 0; i < 24; i++)
-      {
-         System.out.println("");
-      }
    }
 
    private void reinitialize()
@@ -67,7 +42,7 @@ public class miTriviaInterface
 
       this.printStars();// 1
       this.printSingleStar();// 2
-      NetStudy.getMenuInterface().printBanner();// 3 - 10
+      this.printBanner();// 3 - 10
       this.printSingleStar();// 11
       System.out.println("*                     Network Study Tool");// 12
       this.printSingleStar();// 13
@@ -100,7 +75,8 @@ public class miTriviaInterface
          try
          {
             userInput = br.read();
-         } catch (IOException e)
+         }
+         catch (IOException e)
          {
             // print out user input error
             System.out.println("User input Error in Trivia Interface");

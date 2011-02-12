@@ -14,25 +14,15 @@ public class NetStudy
 
    public static void main(String args[])
    {
-      //
-      // Read XML question data
-      //
-      theQuestionManager.initialize();
 
       //
       // Run the user interface
       //
-
       theMenu.run();
    }
 
    public static questionManager getQuestionManager()
    {
       return (theQuestionManager);
-   }
-
-   public static menuInterface getMenuInterface()
-   {
-      return (theMenu);
    }
 }

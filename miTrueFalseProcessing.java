@@ -14,8 +14,7 @@ public class miTrueFalseProcessing
    private String questionTextLine1;
    private String questionTextLine2;
    private String answerString; // used to display the answer
-   private String answerData; // used to check the answer against the user
-   // input
+   private String answerData; // used to check the answer against the user input
    private String userInput; // used to display the user input answer
    private menuInterface.miState theState = menuInterface.miState.DisplayQuestion;
    private int numCorrectAnswers = 0, numQuestionsAsked = 0;
@@ -33,7 +32,6 @@ public class miTrueFalseProcessing
    {
       theState = menuInterface.miState.DisplayQuestion;
       NetStudy.getQuestionManager().setTrueFalseQuestionNum(0);
-      NetStudy.getQuestionManager().setDisplayAnser(false);
       numCorrectAnswers = 0;
       numQuestionsAsked = 0;
       score = 0;
@@ -106,7 +104,8 @@ public class miTrueFalseProcessing
          lastSpace = questionTextLine1.lastIndexOf(" ");
          questionTextLine1 = (String) questionText.subSequence(0, lastSpace);
          questionTextLine2 = (String) questionText.subSequence((lastSpace + 1), (questionText.length()));
-      } else
+      }
+      else
       {
          questionTextLine1 = questionText;
          questionTextLine2 = "";
@@ -136,11 +135,10 @@ public class miTrueFalseProcessing
       if (theState == menuInterface.miState.DisplayQuestion)
       {
          theState = menuInterface.miState.DisplayAnswer;
-         NetStudy.getQuestionManager().setDisplayAnser(true);
-      } else
+      }
+      else
       {
          theState = menuInterface.miState.DisplayQuestion;
-         NetStudy.getQuestionManager().setDisplayAnser(false);
          NetStudy.getQuestionManager().incrementTrueFalseNum();
       }
    }
@@ -159,9 +157,7 @@ public class miTrueFalseProcessing
       // on
       // 1/21/11
       //
-      String input = new Character((char) selection).toString();// convert
-      // input
-      // to string
+      String input = new Character((char) selection).toString();
 
       input = input.toUpperCase();
 
@@ -192,9 +188,9 @@ public class miTrueFalseProcessing
             if (this.getDisplayAnserStatus())
             {
                this.handleStateChange();
-            } else
+            }
+            else
             {
-               System.out.println("display again");
                // if the user did not enter a 'T' or 'F' ask for answer again
                askAgainFlag = true;
             }

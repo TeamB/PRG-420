@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 
-public class miTrueFalseInterface
+public class miTrueFalseInterface extends menuInterface
 {
    private boolean exit;
    private int userInput;
@@ -25,36 +25,8 @@ public class miTrueFalseInterface
       theInputProcessor = new miTrueFalseProcessing();
    }
 
-   //
-   // Print 79 stars, screen width assumed is 80 characters
-   //
-   private void printStars()
-   {
-      System.out.println("*******************************************************************************");
-   }
-
-   //
-   // Print a single star
-   //
-   private void printSingleStar()
-   {
-      System.out.println("*");
-   }
-
-   //
-   // print out 24 blank lines to clear the screen
-   //
-   private void clearScreen()
-   {
-      for (int i = 0; i < 24; i++)
-      {
-         System.out.println("");
-      }
-   }
-
    private void reinitialize()
    {
-      NetStudy.getQuestionManager().setDisplayAnser(false);
       theInputProcessor.reinitialize();
       theInputProcessor = null; // delete this object
    }
@@ -73,11 +45,11 @@ public class miTrueFalseInterface
       //
       this.printStars();// 1
       this.printSingleStar();// 2
-      NetStudy.getMenuInterface().printBanner();// 3 - 10
+      this.printBanner();// 3 - 10
       this.printSingleStar();// 11
       System.out.println("*                     Network Study Tool");// 12
       this.printSingleStar();// 13
-      System.out.println("*                      Trivia Questions");// 14
+      System.out.println("*                    True False Questions");// 14
       this.printSingleStar();// 15
       System.out.println("*   " + theInputProcessor.getTextLine1());// 16
       System.out.println("*   " + theInputProcessor.getTextLine2()); // 17
@@ -90,12 +62,14 @@ public class miTrueFalseInterface
       if (theInputProcessor.getDisplayAnserStatus())
       {
          System.out.print("  Please press enter to continue or q to quit: ");// 24
-      } else
+      }
+      else
       {
          if (theInputProcessor.getAskAgainFlag())
          {
             System.out.print("  Try Again! Please enter T for True and F for false or q to quit: ");// 24
-         } else
+         }
+         else
          {
             System.out.print("  Please enter T for True and F for false or q to quit: ");// 24
          }
@@ -118,10 +92,11 @@ public class miTrueFalseInterface
          try
          {
             userInput = br.read();
-         } catch (IOException e)
+         }
+         catch (IOException e)
          {
             // print out user input error
-            System.out.println("User input Error in Trivia Interface");
+            System.out.println("User input Error in True False Interface");
             e.printStackTrace();
          }
 

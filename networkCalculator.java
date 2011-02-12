@@ -34,10 +34,12 @@ public class networkCalculator
       if (ipOctet1 < 128)
       {
          s_subnet = "255.0.0.0";
-      } else if (ipOctet1 < 192)
+      }
+      else if (ipOctet1 < 192)
       {
          s_subnet = "255.255.0.0";
-      } else
+      }
+      else
       {
          s_subnet = "255.255.255.0";
       }
@@ -54,70 +56,92 @@ public class networkCalculator
       if (sub < 9)
       {
          s_subnet = "255.0.0.0";
-      } else if (sub == 9)
+      }
+      else if (sub == 9)
       {
          s_subnet = "255.128.0.0";
-      } else if (sub == 10)
+      }
+      else if (sub == 10)
       {
          s_subnet = "255.192.0.0";
-      } else if (sub == 11)
+      }
+      else if (sub == 11)
       {
          s_subnet = "255.224.0.0";
-      } else if (sub == 12)
+      }
+      else if (sub == 12)
       {
          s_subnet = "255.240.0.0";
-      } else if (sub == 13)
+      }
+      else if (sub == 13)
       {
          s_subnet = "255.248.0.0";
-      } else if (sub == 14)
+      }
+      else if (sub == 14)
       {
          s_subnet = "255.252.0.0";
-      } else if (sub == 15)
+      }
+      else if (sub == 15)
       {
          s_subnet = "255.254.0.0";
-      } else if (sub == 16)
+      }
+      else if (sub == 16)
       {
          s_subnet = "255.255.0.0";
-      } else if (sub == 17)
+      }
+      else if (sub == 17)
       {
          s_subnet = "255.255.128.0";
-      } else if (sub == 18)
+      }
+      else if (sub == 18)
       {
          s_subnet = "255.255.192.0";
-      } else if (sub == 19)
+      }
+      else if (sub == 19)
       {
          s_subnet = "255.255.224.0";
-      } else if (sub == 20)
+      }
+      else if (sub == 20)
       {
          s_subnet = "255.255.240.0";
-      } else if (sub == 21)
+      }
+      else if (sub == 21)
       {
          s_subnet = "255.255.248.0";
-      } else if (sub == 22)
+      }
+      else if (sub == 22)
       {
          s_subnet = "255.255.252.0";
-      } else if (sub == 23)
+      }
+      else if (sub == 23)
       {
          s_subnet = "255.255.254.0";
-      } else if (sub == 24)
+      }
+      else if (sub == 24)
       {
          s_subnet = "255.255.255.0";
-      } else if (sub == 25)
+      }
+      else if (sub == 25)
       {
          s_subnet = "255.255.255.128";
-      } else if (sub == 26)
+      }
+      else if (sub == 26)
       {
          s_subnet = "255.255.255.192";
-      } else if (sub == 27)
+      }
+      else if (sub == 27)
       {
          s_subnet = "255.255.255.224";
-      } else if (sub == 28)
+      }
+      else if (sub == 28)
       {
          s_subnet = "255.255.255.240";
-      } else if (sub == 29)
+      }
+      else if (sub == 29)
       {
          s_subnet = "255.255.255.248";
-      } else
+      }
+      else
       {
          s_subnet = "255.255.255.252";
       }

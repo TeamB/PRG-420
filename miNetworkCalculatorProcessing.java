@@ -39,10 +39,7 @@ public class miNetworkCalculatorProcessing
       if (state == menuInterface.miCalcState.displayOutputs)
       {
 
-         String input = new Character((char) selection).toString();// convert
-         // input
-         // to
-         // string
+         String input = new Character((char) selection).toString();
 
          input = input.toUpperCase();
 
@@ -65,47 +62,74 @@ public class miNetworkCalculatorProcessing
       else
       {
          BufferedReader inputBR = new BufferedReader(new InputStreamReader(System.in));
-         // BufferedReader snIN = new BufferedReader(new
-         // InputStreamReader(System.in));
-
-         // temp input string
          String input = null;
 
          try
          {
             input = inputBR.readLine();
 
-         } catch (IOException e)
+         }
+         catch (IOException e)
          {
             e.printStackTrace();
          }
-
-         if ((state == menuInterface.miCalcState.getIP))
+         
+         if (input.toUpperCase().charAt(0) == 'Q')
          {
-            if (!(input.isEmpty()))
-            {
-               inputIP = input;
-            }
-            state = menuInterface.miCalcState.getSubnetMask;
-         } else if (state == menuInterface.miCalcState.getSubnetMask)
+            exit = true;
+         }
+         else
          {
-            if (!(input.isEmpty()))
-            {
-               inputSN = input;
-            }
 
-            if (Integer.valueOf(inputSN) > 7 && Integer.valueOf(inputSN) < 31)
+            if ((state == menuInterface.miCalcState.getIP))
             {
-               myCalculation = new networkCalculator(inputIP, Integer.valueOf(inputSN));
-            } else
-            {
-               myCalculation = new networkCalculator(inputIP);
+               if ((!input.isEmpty()) && this.validateIPAddress(input))
+               {
+                  inputIP = input;
+                  state = menuInterface.miCalcState.getSubnetMask;
+               }
             }
-            state = menuInterface.miCalcState.displayOutputs;
+            else if (state == menuInterface.miCalcState.getSubnetMask)
+            {
+               if (!(input.isEmpty()))
+               {
+                  inputSN = input;
+               }
+
+               if (Integer.valueOf(inputSN) > 7 && Integer.valueOf(inputSN) < 31)
+               {
+                  myCalculation = new networkCalculator(inputIP, Integer.valueOf(inputSN));
+               }
+               else
+               {
+                  myCalculation = new networkCalculator(inputIP);
+               }
+               state = menuInterface.miCalcState.displayOutputs;
+            }
          }
 
       }
       return (exit);
+   }
+
+   private boolean validateIPAddress(String input)
+   {
+      String[] arrIP = input.split("[.]");
+      boolean retVal = false;
+      
+      if (arrIP.length == 4)
+      {
+         retVal = true;
+         for(int i = 0; i < 4; i++)
+         {
+            if (Integer.parseInt(arrIP[i]) < 0 || Integer.parseInt(arrIP[i]) > 256)
+            {
+               retVal = false;
+            }
+         }
+      }
+      
+      return (retVal);
    }
 
    public networkCalculator getCalculation()
