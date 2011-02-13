@@ -25,8 +25,4 @@ public class qTrivia extends question
       return (theAnswer);
    }
 
-   public void setAnswer(String s)
-   {
-      theAnswer = s;
-   }
 }

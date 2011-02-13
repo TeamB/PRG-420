@@ -55,29 +55,4 @@ public class qMultipleChoice extends question
    {
       return (answer);
    }
-
-   public void setChoiceA(String s)
-   {
-      choice1 = s;
-   }
-
-   public void setChoiceB(String s)
-   {
-      choice2 = s;
-   }
-
-   public void setChoiceC(String s)
-   {
-      choice3 = s;
-   }
-
-   public void setChoiceD(String s)
-   {
-      choice4 = s;
-   }
-
-   public void setAnswer(char c)
-   {
-      answer = c;
-   }
 }

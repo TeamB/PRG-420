@@ -34,14 +34,4 @@ public class question
       return (theQuestion);
    }
 
-   public void setQuestion(String inputQuestion)
-   {
-      theQuestion = inputQuestion;
-   }
-
-   public void printQuestion()
-   {
-      System.out.println(theQuestion);
-   }
-
 }

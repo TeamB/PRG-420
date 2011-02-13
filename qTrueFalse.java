@@ -28,8 +28,4 @@ public class qTrueFalse extends question
       return (theAnswer);
    }
 
-   public void setAnswer(char answer)
-   {
-      theAnswer = answer;
-   }
 }
