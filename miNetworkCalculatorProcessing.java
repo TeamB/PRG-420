@@ -74,7 +74,7 @@ public class miNetworkCalculatorProcessing
             e.printStackTrace();
          }
          
-         if (input.toUpperCase().charAt(0) == 'Q')
+         if (input.length() > 0 && input.toUpperCase().charAt(0) == 'Q')
          {
             exit = true;
          }
@@ -83,7 +83,7 @@ public class miNetworkCalculatorProcessing
 
             if ((state == menuInterface.miCalcState.getIP))
             {
-               if ((!input.isEmpty()) && this.validateIPAddress(input))
+               if (input.length() > 0 && this.validateIPAddress(input))
                {
                   inputIP = input;
                   state = menuInterface.miCalcState.getSubnetMask;
@@ -91,7 +91,7 @@ public class miNetworkCalculatorProcessing
             }
             else if (state == menuInterface.miCalcState.getSubnetMask)
             {
-               if (!(input.isEmpty()))
+               if (input.length() > 0)
                {
                   inputSN = input;
                }
