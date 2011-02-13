@@ -26,43 +26,43 @@
     <Answer>C</Answer>
   </MultipleChoice>
   <MultipleChoice>
-    <Question>4. What is the correct order of layers within the OSI Model?</Question>
-    <ChoiceA>Physical, session, transport, network, data link, application, presentation</ChoiceA>
-    <ChoiceB>Transport, session, network, data link, presentation, application, physical</ChoiceB>
-    <ChoiceC>Physical, data link, network, transport, session, presentation, application</ChoiceC>
-    <ChoiceD>Session, network, data link, application, presentation, physical, application</ChoiceD>
+    <Question>4. What is the correct acronym to determine the order of layers within the OSI Model?</Question>
+    <ChoiceA>PSTNDAP</ChoiceA>
+    <ChoiceB>TSNDPAP</ChoiceB>
+    <ChoiceC>PDNTSPA</ChoiceC>
+    <ChoiceD>SNDAPPA</ChoiceD>
     <Answer>C</Answer>
   </MultipleChoice>
   <MultipleChoice>
     <Question>5. Which of the following statements are true about LANS (local area networks)</Question>
-    <ChoiceA>a. Operate within a limited geographical area</ChoiceA>
-    <ChoiceB>b. Provide full-time connectivity to local services</ChoiceB>
-    <ChoiceC>c. Both A and B</ChoiceC>
-    <ChoiceD>d. Neither</ChoiceD>
+    <ChoiceA>Operate within a limited geographical area</ChoiceA>
+    <ChoiceB>Provide full-time connectivity to local services</ChoiceB>
+    <ChoiceC>Both A and B</ChoiceC>
+    <ChoiceD>Neither</ChoiceD>
     <Answer>C</Answer>
   </MultipleChoice>
   <MultipleChoice>
     <Question>6. What devices are used at the network layer within the OSI model?</Question>
-    <ChoiceA>a. Ethernet Switch</ChoiceA>
-    <ChoiceB>b. Hub</ChoiceB>
-    <ChoiceC>c. Bridge</ChoiceC>
-    <ChoiceD>d. Router</ChoiceD>
+    <ChoiceA>Ethernet Switch</ChoiceA>
+    <ChoiceB>Hub</ChoiceB>
+    <ChoiceC>Bridge</ChoiceC>
+    <ChoiceD>Router</ChoiceD>
     <Answer>D</Answer>
   </MultipleChoice>
   <MultipleChoice>
     <Question>7. Which 2 layers do the TCP/IP and OSI have in common?</Question>
-    <ChoiceA>a. Application and session</ChoiceA>
-    <ChoiceB>b. Internet and physical</ChoiceB>
-    <ChoiceC>c. Transport and application</ChoiceC>
-    <ChoiceD>d. Data link and internet</ChoiceD>
+    <ChoiceA>Application and session</ChoiceA>
+    <ChoiceB>Internet and physical</ChoiceB>
+    <ChoiceC>Transport and application</ChoiceC>
+    <ChoiceD>Data link and internet</ChoiceD>
     <Answer>C</Answer>
   </MultipleChoice>
   <MultipleChoice>
     <Question>8. Which ID is used for routing?</Question>
-    <ChoiceA>a. Network ID</ChoiceA>
-    <ChoiceB>b. Host ID</ChoiceB>
-    <ChoiceC>c. Both A and B</ChoiceC>
-    <ChoiceD>d. Neither</ChoiceD>
+    <ChoiceA>Network ID</ChoiceA>
+    <ChoiceB>Host ID</ChoiceB>
+    <ChoiceC>Both A and B</ChoiceC>
+    <ChoiceD>Neither</ChoiceD>
     <Answer>C</Answer>
   </MultipleChoice>
   <MultipleChoice>
@@ -125,7 +125,7 @@
     <Question>16. The "IP" in TCP/IP is which layer?</Question>
     <ChoiceA>Layer 3: Network Layer</ChoiceA>
     <ChoiceB>Layer 4: Application Layer</ChoiceB>
-    <ChoiceC>Layer 1 : Session Layer</ChoiceC>
+    <ChoiceC>Layer 1: Session Layer</ChoiceC>
     <ChoiceD>Layer 6: Presentation Layer</ChoiceD>
     <Answer>A</Answer>
   </MultipleChoice>
@@ -207,8 +207,8 @@
     <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
-    <Question>12. When you send e-mail, the recipient does not have to be online when the message is sent.</Question>
-    <Answer>F</Answer>
+    <Question>12. When you send e-mail, the recipient (addressee) does not have to be online when the message is sent.</Question>
+    <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
     <Question>13. Using the Refresh meta tag, you can reload a web page over itself.</Question>
@@ -219,7 +219,7 @@
     <Answer>F</Answer>
   </TrueFalse>
   <TrueFalse>
-    <Question>15. A firewall is a security system that acts as a protective boundary between a  network and the outside world.</Question>
+    <Question>15. A firewall is a security system that acts as a protective boundary between a network and the outside world.</Question>
     <Answer>T</Answer>
   </TrueFalse>
   <TrueFalse>
@@ -323,33 +323,33 @@
     <Question>12. What does NAP stands for?</Question>
     <Answer>Network Access Point</Answer>
   </Trivia>
-<!--  <Trivia>
-    <Question>14. </Question>
-    <Answer></Answer>
+  <Trivia>
+    <Question>14. What port do web servers typically listen to?</Question>
+    <Answer>80</Answer>
   </Trivia>
   <Trivia>
-    <Question>15. </Question>
-    <Answer></Answer>
+    <Question>15. What does the header of a Web page contain?</Question>
+    <Answer>It contains information about the page.</Answer>
   </Trivia>
   <Trivia>
-    <Question>16. </Question>
-    <Answer></Answer>
+   <Question>16. Does the recipient of an e-mail have to be online when the message is sent?</Question>
+    <Answer>No</Answer>
   </Trivia>
   <Trivia>
-    <Question>17. </Question>
-    <Answer></Answer>
+    <Question>17. Can you refresh a web page using a Refresh meta tag?</Question>
+    <Answer>No</Answer>
   </Trivia>
   <Trivia>
-    <Question>18. </Question>
-    <Answer></Answer>
+    <Question>18. Who developed SSL?</Question>
+    <Answer>Netscape Corporation</Answer>
   </Trivia>
   <Trivia>
-    <Question>19. </Question>
-    <Answer></Answer>
+    <Question>19. What does SSL stand for?</Question>
+    <Answer>Secure Sockets Layer</Answer>
   </Trivia>
   <Trivia>
-    <Question>20. </Question>
-    <Answer></Answer>
-  </Trivia>-->
+    <Question>20. What does a firewall protect a network from?</Question>
+    <Answer>A firewall protects a network from the outside world.</Answer>
+  </Trivia>
 
 </Quiz>
